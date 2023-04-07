@@ -1,0 +1,14 @@
+@PutMapping("/AlexaBooking")
+	public String alexaBooking( @RequestBody AlexaBookingDTO alexaBookingDTO) {
+		String response;
+//		bookingService.editBooking(id, booking);
+		if (alexaBookingDTO.getAduitoriamName().equals("meeting hall")){
+			response="meeting hall is present";
+		}
+		else {
+			response="wrong meeting hall";
+		}
+
+
+		return response;
+	}
